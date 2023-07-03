@@ -18,6 +18,7 @@ export class MomentFormComponent implements OnInit {
 
   constructor() {}
 
+  // Validação dos meus campmos
   ngOnInit(): void {
     this.momentForm = new FormGroup({
       id: new FormControl(''),
@@ -27,6 +28,7 @@ export class MomentFormComponent implements OnInit {
     });
   }
 
+  // Pegando os valores
   get title() {
     return this.momentForm.get('title')!;
   }
@@ -46,6 +48,5 @@ export class MomentFormComponent implements OnInit {
       return;
     }
     this.onSubmit.emit(this.momentForm.value);
-    console.log('Deu boa');
   }
 }
